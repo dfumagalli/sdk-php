@@ -27,6 +27,6 @@
         "phpunit/phpunit": "^4.8 || ^5.0"
     },
     "require": {
-        "b2bcenter/sdk-php-client": "^1.1.3"
+        "b2bcenter/sdk-php-client": "^1.1.4"
     }
 }
