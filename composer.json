@@ -1,11 +1,11 @@
 {
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/b2bcenter/sdk-php-client"
+            "url": "https://github.com/dfumagalli/sdk-php-client.git",
+            "type": "git"
         }
     ],
-    "name": "b2bcenter/sdk-php",
+    "name": "dfumagalli/sdk-php",
     "description": "SDK for all public GetResponse products",
     "minimum-stability": "stable",
     "license": "MIT",
@@ -24,9 +24,9 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8 || ^5.0"
+        "phpunit/phpunit": "^9.3"
     },
     "require": {
-        "b2bcenter/sdk-php-client": "^1.1.4"
+        "dfumagalli/sdk-php-client": "^1.1"
     }
 }
