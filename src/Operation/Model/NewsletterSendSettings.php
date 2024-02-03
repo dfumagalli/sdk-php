@@ -29,6 +29,8 @@ class NewsletterSendSettings extends BaseModel
     /** @var StringBooleanEnum */
     private $perfectTiming = self::FIELD_NOT_SET;
 
+    /** @var array */
+    private $externalLexpad = self::FIELD_NOT_SET;
 
     /**
      * @param array $selectedCampaigns
@@ -102,6 +104,15 @@ class NewsletterSendSettings extends BaseModel
     }
 
 
+    /**
+     * @param array $selectedCampaigns
+     */
+    public function setExternalLexpad(array $externalLexpad)
+    {
+        $this->externalLexpad = $externalLexpad;
+    }
+
+
         public function jsonSerialize(): array
     {
         $data = [
@@ -113,6 +124,7 @@ class NewsletterSendSettings extends BaseModel
             'selectedContacts' => $this->selectedContacts,
             'timeTravel' => $this->timeTravel,
             'perfectTiming' => $this->perfectTiming,
+            'externalLexpad' => $this->externalLexpad,
         ];
 
         return $this->filterUnsetFields($data);
