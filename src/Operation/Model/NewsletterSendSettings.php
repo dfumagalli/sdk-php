@@ -105,7 +105,7 @@ class NewsletterSendSettings extends BaseModel
 
 
     /**
-     * @param array $selectedCampaigns
+     * @param array $externalLexpad
      */
     public function setExternalLexpad(array $externalLexpad)
     {
@@ -113,7 +113,7 @@ class NewsletterSendSettings extends BaseModel
     }
 
 
-        public function jsonSerialize(): array
+    public function jsonSerialize(): array
     {
         $data = [
             'selectedCampaigns' => $this->selectedCampaigns,

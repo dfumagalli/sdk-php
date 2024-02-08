@@ -23,6 +23,9 @@ abstract class AutoresponderSendSettings extends BaseModel
     /** @var array */
     private $excludedDaysOfWeek = self::FIELD_NOT_SET;
 
+    /** @var array */
+    private $externalLexpad = self::FIELD_NOT_SET;
+
 
     /**
      * @param string $type
@@ -78,6 +81,15 @@ abstract class AutoresponderSendSettings extends BaseModel
     }
 
 
+    /**
+     * @param array $externalLexpad
+     */
+    public function setExternalLexpad(array $externalLexpad)
+    {
+        $this->externalLexpad = $externalLexpad;
+    }
+
+
     public function jsonSerialize(): array
     {
         $data = [
@@ -87,6 +99,7 @@ abstract class AutoresponderSendSettings extends BaseModel
             'recurrence' => $this->recurrence,
             'timeTravel' => $this->timeTravel,
             'excludedDaysOfWeek' => $this->excludedDaysOfWeek,
+            'externalLexpad' => $this->externalLexpad,
         ];
 
         return $this->filterUnsetFields($data);
